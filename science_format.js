@@ -9,7 +9,7 @@ function science_format(answer) {
             <div class='sci'>
                 <div class='row'>
                     <div class='col-md-12'>
-                        <h4> ${answer.text} </h4>
+                        <h4 class='sci_header'> ${answer.text} </h4>
                     </div>
                 </div>
                 <div class='row'>
@@ -64,7 +64,7 @@ function science_format(answer) {
 
                 <div class='row'>
                     <div class='col-md-12'>
-                        <h4> ${answer.text} </h4>
+                        <h4 class='sci_header'> ${answer.text} </h4>
                     </div>
                 </div>
                 <div class='row'>
@@ -114,7 +114,7 @@ function science_format(answer) {
                 <div class='row'>
 
                     <div class='col-md-5'>
-                        <h4> ${answer.text} </h4>
+                        <h4 class='sci_header'> ${answer.text} </h4>
                         <br>
                         <p> ${answer.science.environment} </p>
                     </div>
@@ -154,7 +154,7 @@ function science_format(answer) {
 
                 <div class='row'>
                     <div class='col-md-12'>
-                        <h4> ${answer.text} </h4>
+                        <h4 class='sci_header'> ${answer.text} </h4>
                     </div>
                 </div>
 

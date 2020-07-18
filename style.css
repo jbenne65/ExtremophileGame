@@ -1,31 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap');
 
 body {
-    color: darkblue;
-    font-family: 'Grenze Gotisch', cursive;
+    color: #00008B;
+    font-family: 'Changa', sans-serif;
     background-color: black;
     margin-top: 40px;
     margin-bottom: 40px;
 }
 
 #b {
-    background-color: #1E90FF;
+    background-color:#21A1FE;
     padding: 20px;
     border-radius: 25px;
 }
 
+p {
+    font-size: 20px;
+}
+
 .large-font {
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .adapt {
     color: gray;
+    font-size: 20px;
+}
+
+#adapt_header {
+    font-size: 35px;
+}
+
+.qtext {
+    font-size: 30px;
 }
 
 .sci {
-    background-color: #FFFFE0;
+    background-color:#FFFACD;
     padding: 20px;
     border-radius: 20px;
+    color: black
+}
+
+.sci_header {
+    font-size: 35px;
 }
 
 hr {

@@ -56,7 +56,7 @@ let s4 = new Science('Thermophiles and hyperthermophiles live in very warm envir
                     ['images/a4/geysers.png', 'Hot springs and geysers, such as in Yellowstone National Park. Hot springs occur over areas where Earth’s internal heat reaches the surface.'], 
                     ['images/a4/MOR.png', 'Iceland’s Mid-Ocean Ridge, where the rifting between tectonic plates creates a thin Earth crust and therefore is more exposed to the interior heat of Earth.'], 
                     ['images/a4/vent.png', 'Hydrothermal vents, which occur deep within the ocean where magma comes near the surface of Earth’s crust.'])
-let s5 = new Science('Psychrophiles live in extremely cold environments, specifically between -20 °C (-4 °F) and 15 °C (59 °C). For example:', 
+let s5 = new Science('Psychrophiles live in extremely cold environments, specifically between -20 °C (-4 °F) and 15 °C (59 °F). For example:', 
                     ['images/a5/antartic_ice.png', 'Up to 3 km (2 mi) below the Antarctic ice.'], 
                     ['images/a5/deep_ocean.png', 'The deep ocean, where the temperature remains around 0 °C (32 °F).'], 
                     ['images/a5/permafrost.png', 'Siberian permafrost, where the soil is frozen year round.'],

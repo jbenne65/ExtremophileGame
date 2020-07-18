@@ -15,16 +15,16 @@ function more_stuff(arg2, answ) {
     nah = [nah1, nah2, nah3, nah4]
 
     if (arg2 === 'right') {
-        more.innerHTML = `<h4> ${right[rand_ind(right)]} </h4>`
+        more.innerHTML = `<h4 class='qtext'> ${right[rand_ind(right)]} </h4>`
     }
 
     if (arg2 === 'nah') {
-        more.innerHTML = `<h4> ${nah[rand_ind(nah)]} </h4>`
+        more.innerHTML = `<h4 class='qtext'> ${nah[rand_ind(nah)]} </h4>`
     }
 
     if (arg2 === 'q2_reason') {
         more.innerHTML = 
-            `<h4> 
+            `<h4 class='qtext'> 
                 Not the best choice, but thermophiles do often have acidophile properties - 
                 so it’ll get you through the next ${answ} years. 
             </h4>`
@@ -32,7 +32,7 @@ function more_stuff(arg2, answ) {
 
     if (arg2 === 'q3_reason') {
         more.innerHTML = 
-            `<h4>
+            `<h4 class='qtext'>
                 There was a better choice, but evaporation leading to alkaline 
                 environments can also lead to salty environments. Looks like you’re 
                 in luck - you make it another ${answ} years
@@ -41,7 +41,7 @@ function more_stuff(arg2, answ) {
 
     if (arg2 === 'q4_reason1') {
         more.innerHTML = 
-            `<h4>
+            `<h4 class='qtext'>
                 Not the best decision, but evaporation leading to salty water can 
                 also lead to alkaline environments. It works for you this time, 
                 and you survive another ${answ} years.
@@ -50,7 +50,7 @@ function more_stuff(arg2, answ) {
 
     if (arg2 === 'q4_reason2') {
         more.innerHTML =
-            `<h4>
+            `<h4 class='qtext'>
                 You could have done better, but this will work. Salty environments 
                 have low water activity, so xerophilic adaptations could be useful. 
                 Looks like you’ll go on ${answ} more years.
@@ -59,7 +59,7 @@ function more_stuff(arg2, answ) {
 
     if (arg2 === 'q5_reason') {
         more.innerHTML = 
-            `<h4>
+            `<h4 class='qtext'>
                 You could have done better, but this will work. Salty environments 
                 have low water activity, so xerophilic adaptations could be useful. 
                 Looks like you’ll go on another ${answ} years.
@@ -68,7 +68,7 @@ function more_stuff(arg2, answ) {
 
     if (arg2 === 'q7_reason') {
         more.innerHTML = 
-            `<h4>
+            `<h4 class='qtext'>
                 Not exactly what you needed, but hydrothermal vents can be acidic. You 
                 lucked out here and survive ${answ} more years.
             </h4>`
@@ -76,7 +76,7 @@ function more_stuff(arg2, answ) {
 
     if (arg2 === 'q9_reason') {
         more.innerHTML =
-            `<h4>
+            `<h4 class='qtext'>
                 Not the most helpful decision, but volcanism could lead to acidic 
                 conditions. You’ll get through another ${answ} years.
             </h4>`
@@ -84,7 +84,7 @@ function more_stuff(arg2, answ) {
 
     if (arg2 === 'q12_reason') {
         more.innerHTML =
-            `<h4>
+            `<h4 class='qtext'>
                 You would be better off with something else, but endoliths can 
                 survive at high pressures. You’re ${answ} years closer to aliens saving you.
             </h4>`
@@ -92,7 +92,7 @@ function more_stuff(arg2, answ) {
 
     if (arg2 === 'q16_reason') {
         more.innerHTML =
-            `<h4>
+            `<h4 class='qtext'>
                 Not the safest decision, but  you bury deep down into the rocks and find 
                 water. You make it another ${answ} years.
             </h4>`
@@ -100,7 +100,7 @@ function more_stuff(arg2, answ) {
 
     if (arg2 === 'q18_reason') {
         more.innerHTML =
-            `<h4>
+            `<h4 class='qtext'>
                 There was a better decision, but a thinner atmosphere does mean it’s 
                 getting a lot colder. You survive ${answ} more years.
             </h4>`
@@ -154,5 +154,5 @@ function move_on(arg1) {
 
 function post_Q(que) {
     post_question.innerHTML = 
-        `<h1>${que.post_text}</h1>`
+        `<h1 class='qtext'>${que.post_text}</h1>`
 }

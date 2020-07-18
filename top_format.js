@@ -11,7 +11,7 @@ function progress_bars(years, years_perc, radio) {
 
     // create score tracker; display question text; create answer buttons
     progress.innerHTML = 
-        `<div class='progress' style='height: 24px';>
+        `<div class='progress' style='height: 22px';>
             <div id='year_progress' class='progress-bar bg-warning large-font' role='progressbar' style='width: ${yp}%' aria-valuenow='${y}' aria-valuemin='0' aria-valuemax='1000000'>
                 <div class='d-flex justify-content-start'>
                     &nbsp&nbsp&nbsp${y} years 
@@ -21,7 +21,7 @@ function progress_bars(years, years_perc, radio) {
 
         <br>
 
-        <div class='progress' style='height: 24px';>
+        <div class='progress' style='height: 22px';>
             <div id='radio_progress' class='progress-bar bg-danger large-font' role='progressbar' style='width: ${r}%' aria-valuenow='${r}' aria-valuemin='0' aria-valuemax='100'>
                 <div class='d-flex justify-content-start'>
                     &nbsp&nbsp&nbsp${r}g radium
@@ -38,7 +38,7 @@ function adaptation() {
     adaptations.innerHTML = 
         `<div class='row justify-content-center'>
             <div class='col-lg-4 text-center'>
-                <h1 class='justify-content-center'> 
+                <h1 class='justify-content-center' id='adapt_header'> 
                     Adaptations 
                 </h1>
             </div>
