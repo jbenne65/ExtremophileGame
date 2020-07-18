@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch&display=swap');
+
+body {
+    color: darkblue;
+    font-family: 'Grenze Gotisch', cursive;
+    background-color: black;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#b {
+    background-color: #1E90FF;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.large-font {
+    font-size: 22px
+}
+
+.adapt {
+    color: gray
+}
+
+.sci {
+    background-color: #FFFFE0;
+    padding: 20px;
+    border-radius: 20px
+}
+
+hr {
+    background: black;
+    height: 1px;
+}
+
+.img_rnd {
+    border-radius: 2px;
+}
+
+.btn-default {
+    border: solid;
+    border-width: 1px;
+}
