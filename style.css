@@ -15,17 +15,17 @@ body {
 }
 
 .large-font {
-    font-size: 22px
+    font-size: 22px;
 }
 
 .adapt {
-    color: gray
+    color: gray;
 }
 
 .sci {
     background-color: #FFFFE0;
     padding: 20px;
-    border-radius: 20px
+    border-radius: 20px;
 }
 
 hr {
