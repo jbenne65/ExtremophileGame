@@ -9,7 +9,7 @@ function more_stuff(arg2, answ) {
 
     nah1 = `That won't do you much good!`
     nah2 = `Buddy. What you doing. Believe in yourself, you can do it.`
-    nah3 = `Mmm... better luck next time.`
+    nah3 = `Mmm... not quite. Better luck next time.`
     nah4 = `Nah my dude. Think about Earth. They are all rooting for you... hypothetically.`
 
     nah = [nah1, nah2, nah3, nah4]
@@ -133,22 +133,32 @@ function move_on(arg1) {
     if (arg1 === 'lose') {
         cont.innerHTML = 
             `<h1 id='lose'> 
-                You Lost ): 
+                Oh no... the radium. The radium is gone! The last living piece of Earth will soon be gone... forever.
             </h1>
-            <button onClick='location.reload()' class='btn btn-default'> 
-                Play Again 
-            </button>`
+            <div class='row justify-content-end'>
+                <div class='col-lg-3 text-right'>
+                    <button onClick='location.reload()' class='btn btn-default'> 
+                        Play Again 
+                    </button>
+                </div>
+            </div>`
     }
 
     // if win
     if (arg1 === 'win') {
         cont.innerHTML =
             `<h1 id='won'> 
-                You Won! 
+                Congratulations! After 1,000,000 years, an alien race has finally showed up on their glowing ships. 
+                They've taken you aboard and given you everything you need to live a comfortable life. You're safe. 
+                And you're alive.
             </h1>
-            <button onClick='location.reload()' class='btn btn-default'> 
-                Play Again 
-            </button>`
+            <div class='row justify-content-end'>
+                <div class='col-lg-3 text-right'>
+                    <button onClick='location.reload()' class='btn btn-default'> 
+                        Play Again 
+                    </button>
+                </div>
+            </div>`
     }
 }
 

@@ -49,18 +49,17 @@ function home() {
 function story_pg_1() {
     story.innerHTML = 
         `<p class='story'>
-            You lived on Earth for millions of years, a humble bacteria just 
-            mindlessly doing what you do. Life has been good. But for all the 
-            years you’ve been around, there is one day you will never, ever
-            forget: the day the Earth was vaporized.
+            You’ve lived on Earth for millions of years, a humble bacteria just 
+            mindlessly doing what you do. But for all those years, there is one 
+            day you will never, ever forget: the day the Earth was vaporized.
 
             <br>
             <br>
-
+            
             It happened all too quickly; one moment, you were chilling on the 
-            wing of a cardinal, and the next, the entire world shook and 
-            creaked and tumbled and shattered. And then… well, and then 
-            everything you ever knew was gone. But you weren’t.
+            wing of a cardinal, and the next, the entire world shook and creaked 
+            and tumbled and shattered. And then… well, and then everything you 
+            ever knew was gone. But you weren’t.
         </p>
         <div class='row justify-content-end'>
             <div class='col-lg-2 text-right'>
@@ -78,19 +77,12 @@ function story_pg_1() {
 function story_pg_2() {
     story.innerHTML = 
         `<p class='story'>
-            Somehow, you survived the gigantic impact, being ejected out into 
-            space on a small rock. You hurtled away from home, deeper and deeper 
-            into this black void. The thought of surviving in space was daunting, 
-            but this small rock that saved you wasn’t just a rock; no, your 
-            Earthly companion was special. 
-
-            <br>
-            <br>
-
-            It contained radium, a radioactive element you could use to gain 
-            special abilities. You harnessed its energy and developed ways to 
-            protect yourself against the cold vacuum of space, and then you went 
-            dormant. For years, and years, and years, until today.
+            Somehow, you survived the gigantic impact, being ejected out into space 
+            on a small rock. But it was no ordinary rock; it contained radium, a 
+            radioactive element you could use to gain special abilities. You 
+            harnessed its energy and developed ways to protect yourself against the 
+            cold vacuum of space, and then you went dormant. For years, and years, 
+            and years, until today.
         </p>
         <div class='row justify-content-end'>
             <div class='col-lg-3 text-right'>
@@ -108,21 +100,21 @@ function story_pg_2() {
 function story_pg_3() {
     story.innerHTML = 
         `<p class='story'>
-            Today, you woke up to a miracle: your lonely radium rock from Earth 
-            was now headed right for a planet. And not just any planet; this 
-            planet looked just like Earth. Water, land, white, puffy clouds; 
-            just… no green plants. No life.
+            Today, you woke up to a miracle: your lonely radium rock from Earth was 
+            now headed right for a planet. And not just any planet; this planet 
+            looked just like Earth. Water, land, white, puffy clouds; just… nothing 
+            green. No life.
 
             <br>
             <br>
 
-            You braced yourself as your rock pierced the planet’s atmosphere 
-            and began to tumble. Your rock crashed into the water, and you and 
-            the radium sunk deep into the ocean of this new world. With a jolt, 
-            you settled at the bottom, and you were determined: using the radium, 
-            you would develop whatever skills were necessary to survive this planet. 
-            If you could make it a million years, there was a chance an alien race 
-            would find you; you just had to make it. Survive a million years.
+            You braced yourself as your rock pierced the planet’s atmosphere and began 
+            to tumble. Your rock crashed into the water, and you and the radium sunk 
+            deep into the ocean of this new world. With a jolt, you settled at the 
+            bottom, and you were determined: using the radium, you would develop 
+            whatever skills were necessary to survive this planet. If you could make 
+            it a million years, there was a chance an alien race would find you; you 
+            just had to make it. Survive a million years.
         </p>
         <div class='row justify-content-end'>
             <div class='col-lg-3 text-right'>
@@ -146,8 +138,29 @@ function instructions() {
         <p>
             The environment of this planet is constantly changing. 
             You have 100g of radium that allow you to develop extremophile 
-            adaptations. Choose wisely - make it 1,000,000 years, and maybe 
+            adaptations. 
+
+            <br>
+            <br>
+            
+            Choose wisely - make it 1,000,000 years, and maybe 
             an alien race will save you!
+
+            <br>
+            <br>
+
+            Progress bars at the top will show how many years you've survived 
+            and how much radium you have left. 
+
+            <br>
+            <br>
+
+            Every time you chose an adaptation, it will no longer cost radium.
+
+            <br>
+            <br>
+
+            Good luck, and may the environment be ever in your favor.
         </p>
         <div class='row justify-content-end'>
             <div class='col-lg-3 text-right'>

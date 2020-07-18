@@ -40,8 +40,6 @@ function choose_ans(Q, ans_num, years, radio) {
         
         science_format(ans)
 
-        more_stuff(arg, add_years)
-
         move_on('win', arg)
     }
 
@@ -53,8 +51,6 @@ function choose_ans(Q, ans_num, years, radio) {
         progress_bars(new_year, year_perc, 0)
 
         science_format(ans)
-
-        more_stuff(arg, add_years)
 
         move_on('lose')
     }
