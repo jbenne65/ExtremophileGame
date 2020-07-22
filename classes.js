@@ -1,4 +1,7 @@
-// create Answer class with attributes text, science, and cost of radioactivity
+// --------------------------------------------------
+// create Answer class with attributes text, science, 
+// cost of radioactivity, and name of answer button
+// --------------------------------------------------
 function Answer(text, sci, radio, name) {
     this.text = text
     this.science = sci
@@ -6,7 +9,11 @@ function Answer(text, sci, radio, name) {
     this.name = name
 }
 
-// create Question class with attributes text and answers (list that contain Answer object and years gained)
+// ----------------------------------------------------------------
+// create Question class with attributes text and answers 
+// (list that contain Answer object (a), years gained (p), 
+// and designation to correct / kind of correct / wrong blurb (uh))
+// ----------------------------------------------------------------
 function Question(text, post_text, answer1, answer2, answer3) {
     this.text = text
     this.post_text = post_text
@@ -24,70 +31,95 @@ function Question(text, post_text, answer1, answer2, answer3) {
     this.uh3 = answer3[2]
 }
 
+// ----------------------------------------------
+// create Science class with science text (envir) 
+// & pictures and captions as list (pic4_capt)
+// ----------------------------------------------
 function Science(envir, pic1_capt, pic2_capt, pic3_capt, pic4_capt) {
     this.environment = envir
+
     this.pic1_src = pic1_capt[0]
     this.pic1_text = pic1_capt[1]
+
     this.pic2_src = pic2_capt[0]
     this.pic2_text = pic2_capt[1]
+
     this.pic3_src = pic3_capt[0]
     this.pic3_text = pic3_capt[1]
+
     this.pic4_src = pic4_capt[0]
     this.pic4_text = pic4_capt[1]
 }
 
+// --------------------------
+// initialize Science objects
+// --------------------------
+
+// acidophile
 let s1 = new Science('Acidophiles live in acidic environments, or places with pH <5. For example:', 
                     ['images/a1/mine.png', 'Acid mine drainage sites, which are mainly the product of abandoned coal mines.'], 
                     ['images/a1/acidic_lakes.png', 'Acidic lakes, such as the lake in the crater of the volcano Kawah Ijen. These form as the result of water reacting with certain types of bedrock and soils.'], 
                     ['images/a1/geyser.png', 'Hot springs, such as in Yellowstone National Park. Hot springs occur over areas where Earth’s internal heat reaches the surface.'],
                     ['images/a1/vent.png', 'Acidic hydrothermal vents, which occur deep within the ocean where magma comes near the surface of Earth’s crust.'])
+// alkaliphile
 let s2 = new Science('Alkaliphiles live in basic, or alkaline, environments; these are places with a ph >9. A common, natural alkaline environment are soda lakes; these form when lakes have limited water outflow and balanced evaporation rates, among other things. Examples include:', 
                     ['images/a2/rift_valley.png', 'Rift Valley lakes of East Africa, a type of soda lake.'], 
                     ['images/a2/soda_lakes.png', 'Soda lakes of the western USA.'],
                     ['images/a2/vent.png', 'Alkaline hydrothermal vents, which occur deep within the ocean where magma comes near the surface of Earth’s crust.'],
                     [,])
+// halophile
 let s3 = new Science('Halophiles live in environments with high salt concentrations. For example:', 
                     ['images/a3/dead_sea.png', 'The Dead Sea, which is potentially 9x as briny as the sea. Located in an arid low-lying desert, water evaporates quickly, leaving behind salt.'], 
                     ['images/a3/deep_sea_brine.png', 'Deep sea brine pools, which form above salt deposits. They can be 3x to 8x as salty as the surrounding ocean, making them much more dense.'], 
                     ['images/a3/great_salt_lake.png', 'Great Salt Lake, which retains its saltiness because of limited water outflow and evaporation, which traps salt in the lake.'],
                     [,])
+// thermophile / hyperthermophile
 let s4 = new Science('Thermophiles and hyperthermophiles live in very warm environments. Specifically,  thermophiles live at temperatures greater than 45 °C (113 °F) and hyperthermophiles live at temperatures greater than 80 &#176;C (176 &#176;F). Examples include:', 
                     ['images/a4/fumarole.png', 'Fumaroles, which are openings near volcanoes that allow Earth’s internal heat to escape.'], 
                     ['images/a4/geysers.png', 'Hot springs and geysers, such as in Yellowstone National Park. Hot springs occur over areas where Earth’s internal heat reaches the surface.'], 
                     ['images/a4/MOR.png', 'Iceland’s Mid-Ocean Ridge, where the rifting between tectonic plates creates a thin Earth crust and therefore is more exposed to the interior heat of Earth.'], 
                     ['images/a4/vent.png', 'Hydrothermal vents, which occur deep within the ocean where magma comes near the surface of Earth’s crust.'])
+// psychrophile
 let s5 = new Science('Psychrophiles live in extremely cold environments, specifically between -20 °C (-4 °F) and 15 °C (59 °F). For example:', 
                     ['images/a5/antartic_ice.png', 'Up to 3 km (2 mi) below the Antarctic ice.'], 
                     ['images/a5/deep_ocean.png', 'The deep ocean, where the temperature remains around 0 °C (32 °F).'], 
                     ['images/a5/permafrost.png', 'Siberian permafrost, where the soil is frozen year round.'],
                     [,])
+// piezophile / barophile
 let s6 = new Science('Piezophiles / barophiles live at pressures significantly greater than atmospheric pressure, or the pressure at the surface of Earth. For example:', 
                     ['images/a6/crust.png', 'Deep inside Earth’s crust, where pressure increases with every kilometer.'], 
                     ['images/a6/marianas_trench.png', 'The deep sea, such as the Mariana Trench, the deepest part of the ocean. The bottom of the Mariana trench reaches pressures 1000x greater than atmospheric pressure.'],
                     [,],
                     [,])
+// endolith
 let s7 = new Science('Endoliths live inside of rocks and coral.', 
                     ['images/a7/rock.png', ''],
                     [,],
                     [,],
                     [,])
+
+// xerophile
 let s8 = new Science('Xerophiles live in environments where there is very little water available. This includes dry environments and those with low water activity, which generally coincide with high salinity. Examples include:', 
                     ['images/a8/desert.png', 'Deserts, which receive less than 25 cm (10 in) of precipitation a year.'], 
                     ['images/a8/food.png', 'Foods preserved by dehydration or enhanced sugar levels.'], 
                     ['images/a8/salt_bed.png', 'Salt beds, which are the relics of evaporated bodies of water.'],
                     [,])
+// radioresistant
 let s9 = new Science('Radioresistant organisms are tolerant of high radiation, such as UV and gamma radiation. Radiation mostly comes from the sun, but is dissipated by Earth’s atmosphere. Places radioresistant organisms have been found include:', 
                     ['images/a9/desert.png', 'Deserts, which can be exposed to high radiation.'], 
                     ['images/a9/ISS.png', 'The outer surface of the International Space Station.'], 
                     ['images/a9/mesosphere.png', 'Very high altitudes, up to the top of the mesosphere at 85 km (53 mi).'], 
                     ['images/a9/ocean.png', 'Oceans, which can be exposed to high radiation.'])
+// metallophiles
 let s10 = new Science('Metallophiles are found in environments with high metal concentrations, such as lead, zinc, and nickel. For example:', 
                     ['images/a10/agriculture.png', 'Agriculture locations where metal - rich treatments are used to help plant growth.'], 
                     ['images/a10/metal_waste.png', 'Metallurgic waste dumps left by human activity.'], 
                     ['images/a10/nickel_soil.png', 'Nickel-rich ultramafic soils such as those in New Caledonia.'], 
                     ['images/a10/volcano.png', 'Volcanic sites, where fresh magma contains heavy metals.'])
 
-// instantiate Answer objects
+// -------------------------
+// initialize Answer objects
+// -------------------------
 let a1 = new Answer('Acidophile', s1, 10, 'ans1')
 let a2 = new Answer('Alkaliphile', s2, 15, 'ans2')
 let a3 = new Answer('Halophile', s3, 20, 'ans3')
@@ -99,7 +131,9 @@ let a8 = new Answer('Xerophile', s8, 15, 'ans8')
 let a9 = new Answer('Radioresistant', s9, 20, 'ans9')
 let a10 = new Answer('Metallophile', s10, 25, 'ans10')
 
-// instantiate Question objects
+// ---------------------------
+// initialize Question objects
+// ---------------------------
 let q1 = new Question('The skies have been getting darker and darker. You realize it’s been a really long time since you’ve properly seen the sun. As you look up at where it’s meant to be, the first drop hits with a resounding plop. Then another. And another. Suddenly, it’s pouring, and as it hits your cell wall, you realize… it’s acid rain. A lot of it.', 
                     'Eventually the acid rain stops, and you breathe a sigh of relief.',
                     [a1, 150000, 'right'], 
@@ -201,5 +235,9 @@ let q20 = new Question('Without warning, your home becomes cloudy and dark as it
                     [a6, 0, 'nah'], 
                     [a9, 0, 'nah'])
 
+// --------------------------------------------------------
+// create list of questions; will be used to randomize 
+// questions and ensure the same question isn't asked twice
+// --------------------------------------------------------
 q_list = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20]
 

@@ -1,27 +1,39 @@
+// ------------------------------------------------------------------------
+// randomly chooses to correct / wrong blurb or calls kind of correct blurb
+// ------------------------------------------------------------------------
 function more_stuff(arg2, answ) {
 
+    // options for correct blurbs
     right1 = `Great choice! You got ${answ} more years!`
     right2 = `You've got this surviving thing under your thumb - you make it ${answ} more years!`
     right3 = `Amazing! ${answ} years for you!`
     right4 = `You are totally on this, you survive another ${answ} years. Succumbing to the elements what?`
 
+    // create list of correct blurbs
     right = [right1, right2, right3, right4]
 
+    // options for wrong blurbs
     nah1 = `That won't do you much good!`
     nah2 = `Buddy. What you doing. Believe in yourself, you can do it.`
     nah3 = `Mmm... not quite. Better luck next time.`
     nah4 = `Nah my dude. Think about Earth. They are all rooting for you... hypothetically.`
 
+    // create lsit of wrong blurbs
     nah = [nah1, nah2, nah3, nah4]
 
+    // displays random correct blurb if uh is 'right'
     if (arg2 === 'right') {
         more.innerHTML = `<h4 class='qtext'> ${right[rand_ind(right)]} </h4>`
     }
 
+    // displays random wrong blurb if uh is 'nah'
     if (arg2 === 'nah') {
         more.innerHTML = `<h4 class='qtext'> ${nah[rand_ind(nah)]} </h4>`
     }
 
+    // ----------------------------------------------------------
+    // displays kind of correct blurb attached to question answer
+    // ----------------------------------------------------------
     if (arg2 === 'q2_reason') {
         more.innerHTML = 
             `<h4 class='qtext'> 
@@ -107,10 +119,13 @@ function more_stuff(arg2, answ) {
     }
 }
 
-// build cont div
+// ----------------
+// build 'cont' div
+// ----------------
 function move_on(arg1) {
 
-    // if not at end of game; build Next Question button
+    // continue game scenario
+    // build Next Question button, which re-initializes next question page
     if (arg1 === 'cont') {
         cont.innerHTML =
             `<div class='row justify-conent-end'>
@@ -129,7 +144,7 @@ function move_on(arg1) {
         nextQ.addEventListener('click', () => reset(more))
     }
 
-    // if lose
+    // lose scenario
     if (arg1 === 'lose') {
         cont.innerHTML = 
             `<h1 id='lose'> 
@@ -144,7 +159,7 @@ function move_on(arg1) {
             </div>`
     }
 
-    // if win
+    // win scenario
     if (arg1 === 'win') {
         cont.innerHTML =
             `<h1 id='won'> 
@@ -162,6 +177,9 @@ function move_on(arg1) {
     }
 }
 
+// -----------------------------------------------------
+// add correct post-question text to 'post_question' div
+// -----------------------------------------------------
 function post_Q(que) {
     post_question.innerHTML = 
         `<h1 class='qtext'>${que.post_text}</h1>`

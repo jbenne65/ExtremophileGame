@@ -1,17 +1,21 @@
+// ----------------------------------------------------
 // executes when Begin Game or Next Question is clicked
+// builds question text and answer buttons
+// ----------------------------------------------------
 function whole_Q(Q_ind, years, radio) {
 
-    // get correct Question
+    // get correct Question from random index
     Q = q_list[Q_ind]
 
-    // remove question from q_list
+    // remove question from q_list (so it's not used again)
     q_list.splice(Q_ind, 1)
 
-    // randomly choose next question
+    // randomly choose next question; will be used move_on()
     next_Q_ind = Math.floor(Math.random()*q_list.length)
 
-    // calculate percent of total years
-    years_perc = years / 1000000 * 100
+    // calculate percent of total years (for progress bar)
+    // SEE IF THIS IS ACTUALLY NEEDED
+    // years_perc = years / 1000000 * 100
 
     // build question text and answer buttons
     question.innerHTML = 
@@ -47,7 +51,7 @@ function whole_Q(Q_ind, years, radio) {
     answer2.addEventListener('click', () => choose_ans(Q, 2, years, radio))
     answer3.addEventListener('click', () => choose_ans(Q, 3, years, radio))
 
-    //disable answer buttons
+    // disable answer buttons after choosing answer
     answer1.addEventListener('click', () => dis_but(answer1))
     answer1.addEventListener('click', () => dis_but(answer2))
     answer1.addEventListener('click', () => dis_but(answer3))
@@ -61,6 +65,9 @@ function whole_Q(Q_ind, years, radio) {
     answer3.addEventListener('click', () => dis_but(answer3))
 }
 
+// ------------------------
+// function disables button
+// ------------------------
 function dis_but(button) {
     button.disabled = true
 }

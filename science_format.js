@@ -1,7 +1,9 @@
-// build science div based on answer choice
+// ------------------------------------------
+// build science blurb based on answer choice
+// ------------------------------------------
 function science_format(answer) {
 
-    // for answers with 4 pictures
+    // for answers with 4 pictures (acidophile, thermophile / hyperthermophile, radioresistant, metallophile)
     if (answer.name === 'ans1' || answer.name === 'ans4' || answer.name === 'ans9' || answer.name === 'ans10') {
         science.innerHTML = 
             `<br>
@@ -55,7 +57,7 @@ function science_format(answer) {
             <br>`
     } 
 
-    // for answers with 3 pictures
+    // for answers with 3 pictures (alkaliphile, halophile, psychrophile, xerophile)
     if (answer.name == 'ans2' || answer.name == 'ans3' || answer.name === 'ans5' || answer.name === 'ans8') {
         science.innerHTML = 
             `<br>
@@ -105,7 +107,7 @@ function science_format(answer) {
             <br>`
     }
 
-    // for answers with 2 pictures
+    // for answers with 2 pictures (barophile / piezophile)
     if (answer.name === 'ans6') {
         science.innerHTML = 
             `<br>
@@ -145,7 +147,7 @@ function science_format(answer) {
             <br>`
     }
 
-    // for answers with 1 picture
+    // for answers with 1 picture (endolith)
     if (answer.name === 'ans7') {
         science.innerHTML = 
             `<br>

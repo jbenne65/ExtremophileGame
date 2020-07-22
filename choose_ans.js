@@ -1,4 +1,7 @@
-// executes when an answer is chosen
+// ----------------------------------------------
+// executes when an answer is chosen / clicked
+// calls correct functions based on chosen answer
+// ----------------------------------------------
 function choose_ans(Q, ans_num, years, radio) {
 
     // defines variables based on answer# clicked
@@ -27,13 +30,14 @@ function choose_ans(Q, ans_num, years, radio) {
     new_year = years + add_years
     new_radio = radio - sub_radio
 
+    // calculate percent of total years (for progress bar)
     year_perc = new_year / 1000000 * 100
 
+    // change chosen answer text color to black in Adaptations div
     document.querySelector(`#${ans.name}`).setAttribute('style', 'color: black !important')
 
-    // add to progress bars
-    // open science
     // win scenario
+    // add to progress bars; open science blurb; display win blurb
     if (new_year >= 1000000 && new_radio >= 0) {
 
         progress_bars(1000000, 100, new_radio)
@@ -43,9 +47,8 @@ function choose_ans(Q, ans_num, years, radio) {
         move_on('win', arg)
     }
 
-    // add to progress bars
-    // open science
-    // lose scenario; display 'You Lost'
+    // lose scenario
+    // add to progress bars; open science; display lose blurb
     else if (new_radio <= 0 && new_year < 1000000) {
 
         progress_bars(new_year, year_perc, 0)
@@ -55,9 +58,8 @@ function choose_ans(Q, ans_num, years, radio) {
         move_on('lose')
     }
 
-    // add to progress bars
-    // open science
     // continue game scenario
+    // add to progress bars; open science; continue game scenario
     else {
 
         progress_bars(new_year, year_perc, new_radio)
@@ -69,16 +71,17 @@ function choose_ans(Q, ans_num, years, radio) {
         move_on('cont')
     }
 
-    // changes radioactivity value to 0 for clicked answer
+    // changes cost of radioactivity value to 0 for clicked answer
     ans.radio = 0  
-
 }
 
+// --------------------------------------------------------
+// function changes innerHTML to a null string (essentially 
+// deletes elements, in the veiwer's perspective)
+// --------------------------------------------------------
 function reset(ele) {
     ele.innerHTML = ''
 }
 
 // right now it reloads to beginning of story; find way to reload at first question?
     // would have to re-initialize q_list
-
-// win and lose scenarios st

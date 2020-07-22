@@ -1,17 +1,22 @@
-// instantiates scores
+// instantiates year and radium left scores
 let years_initial = 0
 let radio_initial = 100
 
+// -----------------------------------------
+// function chooses random index from a list
+// -----------------------------------------
 function rand_ind(name) {
     i = Math.floor(Math.random()*name.length)
     return i
 }
 
+// choose random question from question list
 Q_next = rand_ind(q_list)
 
-prev_ans = []
+// CHECK IF THIS IS NEEDED OR NOT
+// prev_ans = []
 
-// create body variable
+// create js variables for HTML divs
 var b = document.querySelector('#b')
 var progress = document.querySelector('#progress')
 var adaptations = document.querySelector('#adaptations')
@@ -22,9 +27,12 @@ var cont = document.querySelector('#cont')
 var post_question = document.querySelector('#post_question')
 var more = document.querySelector('#more')
 
+// call home function to begin cascade of buttons :D
 home()
 
+// ---------------
 // build home page
+// ---------------
 function home() {
     story.innerHTML =
         `<div class='row justify-content-center'>
@@ -45,7 +53,9 @@ function home() {
     next.addEventListener('click', () => story_pg_1())
 }
 
+// ------------------
 // build story page 1
+// ------------------
 function story_pg_1() {
     story.innerHTML = 
         `<p class='story'>
@@ -72,8 +82,10 @@ function story_pg_1() {
     let next = document.querySelector('#next2')
     next.addEventListener('click', () => story_pg_2()) 
 }
- 
+
+// ------------------
 // build story page 2
+// ------------------
 function story_pg_2() {
     story.innerHTML = 
         `<p class='story'>
@@ -96,7 +108,9 @@ function story_pg_2() {
     next.addEventListener('click', () => story_pg_3())
 }
 
+// ------------------
 // build story page 3
+// ------------------
 function story_pg_3() {
     story.innerHTML = 
         `<p class='story'>
@@ -128,8 +142,10 @@ function story_pg_3() {
     next.addEventListener('click', () => instructions())
 }
 
-// build story 3 page
-// create 'Begin Game' button that initiates question page
+// --------------------------------------------------------------------------
+// build instructions page; create 'Begin Game' button that initiates 
+// question page (progress bars, adaptations, question text & answer buttons)
+// --------------------------------------------------------------------------
 function instructions() {
     story.innerHTML = 
         `<h1 class='story'>

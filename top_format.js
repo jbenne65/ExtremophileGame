@@ -1,4 +1,6 @@
+// -------------------
 // build progress bars
+// -------------------
 function progress_bars(years, years_perc, radio) {
 
     // remove text from story
@@ -9,7 +11,7 @@ function progress_bars(years, years_perc, radio) {
     yp = years_perc
     r = radio
 
-    // create score tracker; display question text; create answer buttons
+    // create progress bars
     progress.innerHTML = 
         `<div class='progress' style='height: 22px';>
             <div id='year_progress' class='progress-bar bg-warning large-font' role='progressbar' style='width: ${yp}%' aria-valuenow='${y}' aria-valuemin='0' aria-valuemax='1000000'>
@@ -32,8 +34,9 @@ function progress_bars(years, years_perc, radio) {
         <br>`
 }
 
-
-// build adaptations div
+// ----------------------
+// format adaptations div
+// ----------------------
 function adaptation() {
     adaptations.innerHTML = 
         `<div class='row justify-content-center'>
@@ -43,7 +46,6 @@ function adaptation() {
                 </h1>
             </div>
         </div>
-
 
         <div class='row justify-content-center'>
             <div class='col-sm-4 text-center'>
