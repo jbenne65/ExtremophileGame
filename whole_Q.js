@@ -13,10 +13,6 @@ function whole_Q(Q_ind, years, radio) {
     // randomly choose next question; will be used move_on()
     next_Q_ind = Math.floor(Math.random()*q_list.length)
 
-    // calculate percent of total years (for progress bar)
-    // SEE IF THIS IS ACTUALLY NEEDED
-    // years_perc = years / 1000000 * 100
-
     // build question text and answer buttons
     question.innerHTML = 
         `<h1 class='qtext'> ${Q.text} </h1>

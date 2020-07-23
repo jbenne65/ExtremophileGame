@@ -13,9 +13,6 @@ function rand_ind(name) {
 // choose random question from question list
 Q_next = rand_ind(q_list)
 
-// CHECK IF THIS IS NEEDED OR NOT
-// prev_ans = []
-
 // create js variables for HTML divs
 var b = document.querySelector('#b')
 var progress = document.querySelector('#progress')
