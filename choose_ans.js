@@ -36,7 +36,7 @@ function choose_ans(Q, ans_num, years, radio) {
     // change chosen answer text color to black in Adaptations div
     document.querySelector(`#${ans.name}`).setAttribute('style', 'color: black !important')
 
-    // win scenario
+    // win scenario (if total years above 1,000,000 and radium left above 0)
     // add to progress bars; open science blurb; display win blurb
     if (new_year >= 1000000 && new_radio >= 0) {
 
@@ -47,18 +47,20 @@ function choose_ans(Q, ans_num, years, radio) {
         move_on('win', arg)
     }
 
-    // lose scenario
+    // lose scenario (if radium left below zero; includes both is total years is above or below 1,000,000)
     // add to progress bars; open science; display lose blurb
-    else if (new_radio <= 0 && new_year < 1000000) {
+    else if (new_radio <= 0) {
 
-        progress_bars(new_year, year_perc, 0)
+        og_year_perc = years / 1000000 * 100
+
+        progress_bars(years, og_year_perc, 0)
 
         science_format(ans)
 
         move_on('lose')
     }
 
-    // continue game scenario
+    // continue game scenario (if radium left above zero and total years below 1,000,000)
     // add to progress bars; open science; continue game scenario
     else {
 
